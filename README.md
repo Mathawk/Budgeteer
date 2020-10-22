@@ -11,6 +11,11 @@ For example when paying for a new pair of shoes, a watch or something else, you 
 This creates a mental barrier and a feeling on how much money is actually spent on certain things each month. 
 In the long run the app will help you save money and you will become more aware of the activities on your bank account.
 
+## Requirements
+Access to your account balances. Real-time overview of all your transactions made via the added accounts.
+Expanses are categorized and user can select a monthly budget for each category and a total budget for all categories.
+Push notification are send when you're exceeding your pre-selected monthly budget.
+
 ## Acceptance Criteria
 The app should be available for android smartphones. It should have access to the account information (account balance/transactions) and categorize theses transactions. 
 The User should be able to see his balance, transactions, spendings in certain categories, and how much of the respective budgets is still open for the month. 
