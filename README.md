@@ -10,3 +10,7 @@ That way, when paying e.g for a new pair of shoes, a watch or something else you
 which creates a mental barrier and a feeling on how much money is actually spent on certain things each month. 
 In the long run the app will save you a lot of money and in general you will become more aware of the activities on your bank account. 
 
+## Acceptance Criteria
+The app should be available for android smartphones. It should have access to the account information (account balance/transactions) and categorize theses transactions. 
+The User should be able to see his balance, transactions, spendings in certain categories, and how much of the respective budgets is still open for the month. 
+The app should have the feature to either pay via NFC or directly see transactions that happen via google pay. As soon as a budget is surpassed a warning message should be displayed.
