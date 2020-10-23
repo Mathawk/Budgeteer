@@ -17,7 +17,11 @@ Expanses are categorized and user can select a monthly budget for each category 
 Push notification are send when you're exceeding your pre-selected monthly budget.
 
 ## Target
-Target environment (mobile app, web app, server app)
+The main application will be used on smartphones. Therefore a mobile app needs to be developed. The app will likely be developed for the operating systems Apple iOS and Google Android, since these are the two largest mobile operating systems.
+
+To conduct and analyze payments, the app needs a backend. This backend will be hosted on a server.
+
+A web page might be included in future releases but is not needed for an minimum viable product (MVP).
 
 ## Acceptance Criteria
 The app should be available for android smartphones. It should have access to the account information (account balance/transactions) and categorize theses transactions. 
