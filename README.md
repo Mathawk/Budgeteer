@@ -16,6 +16,9 @@ Access to your account balances. Real-time overview of all your transactions mad
 Expanses are categorized and user can select a monthly budget for each category and a total budget for all categories.
 Push notification are send when you're exceeding your pre-selected monthly budget.
 
+## Target
+Target environment (mobile app, web app, server app)
+
 ## Acceptance Criteria
 The app should be available for android smartphones. It should have access to the account information (account balance/transactions) and categorize theses transactions. 
 The User should be able to see his balance, transactions, spendings in certain categories, and how much of the respective budgets is still open for the month. 
