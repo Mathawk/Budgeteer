@@ -21,7 +21,7 @@ The main application will be used on smartphones. Therefore a mobile app needs t
 
 To conduct and analyze payments, the app needs a backend. This backend will be hosted on a server.
 
-A web page might be included in future releases but is not needed for an minimum viable product (MVP).
+A web page might be included in future releases but is not needed for a minimum viable product (MVP).
 
 ## Acceptance Criteria
 The app should be available for android smartphones. It should have access to the account information (account balance/transactions) and categorize theses transactions. 
