@@ -1,4 +1,4 @@
-#Preperations
+# Preperations
 ## Problem Statement
 A lot of people are unorganized when looking at their financials. 
 A direct case is seen at some people at the HSBA, who live at home, don't really have any expenses and still manage to spend all their money every month.
@@ -28,7 +28,10 @@ The User should be able to see his balance, transactions, spendings in certain c
 The app should have the feature to either pay via NFC or directly see transactions that happen via google pay. 
 As soon as a budget is surpassed a warning message should be displayed.
 
-#Roles
+## Roles
 Project Manager: Dario
 Requirements Engineer: Valentin
 Developers: Yvonne and Matthias
+
+## Structural Organization
+The company will be organized in a project organization, due to the small size of the tasks and project-like development.
