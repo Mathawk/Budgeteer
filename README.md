@@ -1,5 +1,4 @@
-# Budgeteer
-
+#Preperations
 ## Problem Statement
 A lot of people are unorganized when looking at their financials. 
 A direct case is seen at some people at the HSBA, who live at home, don't really have any expenses and still manage to spend all their money every month.
@@ -28,3 +27,8 @@ The app should be available for android smartphones. It should have access to th
 The User should be able to see his balance, transactions, spendings in certain categories, and how much of the respective budgets is still open for the month. 
 The app should have the feature to either pay via NFC or directly see transactions that happen via google pay. 
 As soon as a budget is surpassed a warning message should be displayed.
+
+#Roles
+Project Manager: Dario
+Requirements Engineer: Valentin
+Developers: Yvonne and Matthias
