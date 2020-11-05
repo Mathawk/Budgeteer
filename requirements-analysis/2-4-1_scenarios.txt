@@ -1,0 +1,22 @@
+2.4	System models
+The System models include scenarios, use cases, and the analysis object model for the system. This section should contain the complete functional specification, including mock-ups, paper-based prototypes or storyboards illustrating the user interface of the system and navigational paths representing the sequence of screens.
+
+2.4.1	Scenarios
+
+1
+Scenario: Create a budget
+Persona: Bob
+Flow:
+-	After Bob has opened the Budgeteer app, he would like to create a new budget for a specific category of spending. This category might be called “Entertainment” for cinema or theatre visits or “Gaming” for computer games and in-game items.
+-	He clicks on the button “Create new budget” and enters a name for the category
+-	After entering the nave, Bob enters the amount of money for that budget
+-	At the end, Bob saves the budet
+
+2
+Scenario: Check budget
+Persona: Bob
+Flow:
+-	Bob has finished his workday and is walking home. On his way home he passes a cinema and sees the screen times of a new movie, which he would like to watch.
+-	He figures out the movies price and opens his budgeteer app.
+-	In the budgeteer app Bob presses the button “Check budget” and then enters the price of the movie.
+-	The app tells bob that watching the movie is within his budget, but that he gets very close to reaching the budget. Bob decides that he will not buy and drinks or popcorn to not exceed the budget.
