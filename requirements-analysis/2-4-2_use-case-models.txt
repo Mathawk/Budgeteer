@@ -1,0 +1,31 @@
+2.4.2	Use case model
+
+1
+Use Case: createBudget
+Actor: User
+Role: User
+Flow:
+- User: Creates a new budget by clicking the button "New budget".
+- System: Generates a new, empty budget and shows a field to enter the name of the budget.
+- User: Enters name of the budget and clicks button "Next".
+- System: Displays a field where the user can enter the amount of money for that budget.
+- User: Enters the amount of money for that budget and clicks the button "Save".
+- System: Saves the name and amount of money for the new budget.
+Conditions:
+- Entry: User has account
+- Exit: New budget saved to database
+
+2
+Use Case: checkBudget
+Actor: User
+Role: User
+Flow:
+- User: Opens the app and selects one of many budgets that are displayed on the dashboard.
+- System: Displays the selected budget with its name, the maximum budget and the amount of money that has already been spent.
+- User: Clicks on the button "Check budget".
+- System: Displays a page where the name of the expense and the amount can be entered.
+- User: Enters the name and the amount of the expense and clicks the button "Check".
+- System: Calculates whether the entered amount is within the budget or is exceeding it. The app displays the result either as "Within budget" or "Exceeding budget".
+Conditions:
+- Entry: User has created a budget
+- Exit: New expenses get added to the existing budget.
