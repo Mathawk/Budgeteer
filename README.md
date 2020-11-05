@@ -31,7 +31,7 @@ As soon as a budget is surpassed a warning message should be displayed.
 ## Roles
 Project Manager: Dario
 Requirements Engineer: Valentin
-Developers: Yvonne and Matthias
+Developers: Yvonne, Bendix and Matthias
 
 ## Structural Organization
 The company will be organized in a project organization, due to the small size of the tasks and project-like development.
