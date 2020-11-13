@@ -29,9 +29,9 @@ The app should have the feature to either pay via NFC or directly see transactio
 As soon as a budget is surpassed a warning message should be displayed.
 
 ## Roles
-Project Manager: Dario
-Requirements Engineer: Valentin
-Developers: Yvonne, Bendix and Matthias
+* Project Manager: Dario
+* Requirements Engineer: Valentin
+* Developers: Yvonne, Bendix and Matthias
 
 ## Structural Organization
 The company will be organized in a project organization, due to the small size of the tasks and project-like development.
