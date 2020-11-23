@@ -171,11 +171,16 @@ class CustomListItemTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 3.0),
       child: SizedBox(
-        height: 100,
+        height: 120,
         child: Container(
-          color: Colors.black,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            borderRadius: BorderRadius.all(
+                Radius.circular(7)
+            ),
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -210,16 +215,16 @@ class MyStatelessWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.black87,
+        color: Color.fromRGBO(0, 0, 0, 0.92),
         child: ListView(
           padding: const EdgeInsets.all(10.0),
           children: <Widget>[
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
+                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        'Monthly Budget:',
+                        'Monthly Budget',
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -229,9 +234,9 @@ class MyStatelessWidget extends StatelessWidget {
                       ))),
               Expanded(
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                 child: Text(
-                  'Free Amount:',
+                  'Free Amount',
                   textAlign: TextAlign.right,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
@@ -244,25 +249,25 @@ class MyStatelessWidget extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
+                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
                         '\$ 5,000',
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 15.0,
+                          fontSize: 25.0,
                           color: Colors.white,
                         ),
                       ))),
               Expanded(
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
                 child: Text(
                   '\$ 210',
                   textAlign: TextAlign.right,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 15.0,
+                    fontSize: 25.0,
                     color: Colors.orange,
                   ),
                 ),
@@ -271,7 +276,7 @@ class MyStatelessWidget extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 0.0),
+                      padding: const EdgeInsets.fromLTRB(0, 20.0, 0.0, 10.0),
                       child: Text(
                         'Your Budgets',
                         textAlign: TextAlign.left,
@@ -282,26 +287,26 @@ class MyStatelessWidget extends StatelessWidget {
                         ),
                       ))),
               Expanded(
+                flex: 0,
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 20.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0, 10.0),
                 child: RaisedButton(
                   textColor: Colors.white,
-                  padding: EdgeInsets.all(0.0),
+                  padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0),
-                    side: BorderSide(color: Colors.green, width: 2),
+                    side: BorderSide(color: Colors.green, width: 3),
                   ),
                   child: Text('New Budget',
                       style: TextStyle(
-                          fontSize: 15,
+                          fontSize: 14,
                           color: Colors.white,
-                          fontWeight: FontWeight.normal)),
+                          fontWeight: FontWeight.w500)),
                 ),
               )),
             ]),
             CustomListItemTwo(
               thumbnail: Container(
-                color: Colors.black,
                 alignment: Alignment.center,
                 child: Icon(
                   Icons.videogame_asset_outlined,
@@ -406,14 +411,18 @@ class MyStatelessWidget extends StatelessWidget {
               freeamount: '\$ 0',
               percentused: 1.00,
             ),
-            FloatingActionButton.extended(
-              backgroundColor: Colors.green,
-              label: Text(
-                'New Expense',
-                style: TextStyle(
-                  color:Colors.white
-                )
-              )
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0, 10.0),
+              child: FloatingActionButton.extended(
+                  backgroundColor: Colors.green,
+                  label: Text(
+                      'New Expense',
+                      style: TextStyle(
+                          color:Colors.white
+                      )
+                  )
+              ),
             )
           ],
         ));
