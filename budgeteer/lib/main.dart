@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'add_budget.dart';
+import 'new_expense.dart';
 
 void main() => runApp(MyApp());
 
@@ -170,9 +171,7 @@ class CustomListItemTwo extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             color: Colors.black,
-            borderRadius: BorderRadius.all(
-                Radius.circular(7)
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(7)),
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -277,29 +276,30 @@ class MyStatelessWidget extends StatelessWidget {
                             fontWeight: FontWeight.bold),
                       ))),
               Expanded(
-                flex: 0,
+                  flex: 0,
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0, 10.0),
-                child: RaisedButton(
-                  textColor: Colors.white,
-                  padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50.0),
-                    side: BorderSide(color: Colors.green, width: 3),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AddBudget()),
-                    );
-                  },
-                  child: Text('New Budget',
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500)),
-                ),
-              )),
+                    padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0, 10.0),
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      color: Colors.transparent,
+                      padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50.0),
+                        side: BorderSide(color: Colors.green, width: 3),
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => AddBudget()),
+                        );
+                      },
+                      child: Text('New Budget',
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500)),
+                    ),
+                  )),
             ]),
             CustomListItemTwo(
               thumbnail: Container(
@@ -408,15 +408,17 @@ class MyStatelessWidget extends StatelessWidget {
               percentused: 1.00,
             ),
             Padding(
-            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0, 10.0),
+              padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0, 10.0),
               child: FloatingActionButton.extended(
-              backgroundColor: Colors.green,
-              label: Text(
-              'New Expense',
-              style: TextStyle(
-                color:Colors.white
-              )
-              )
+                backgroundColor: Colors.green,
+                label:
+                    Text('New Expense', style: TextStyle(color: Colors.white)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewExpense()),
+                  );
+                },
               ),
             )
           ],
