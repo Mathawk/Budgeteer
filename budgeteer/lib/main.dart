@@ -1,12 +1,5 @@
-/// Flutter code sample for ListTile
-
-// Here is an example of an article list item with multiline titles and
-// subtitles. It utilizes [Row]s and [Column]s, as well as [Expanded] and
-// [AspectRatio] widgets to organize its layout.
-//
-// ![Custom list item b](https://flutter.github.io/assets-for-api-docs/assets/widgets/custom_list_item_b.png)
-
 import 'package:flutter/material.dart';
+import 'add_budget.dart';
 
 void main() => runApp(MyApp());
 
@@ -171,16 +164,11 @@ class CustomListItemTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 3.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SizedBox(
-        height: 120,
+        height: 100,
         child: Container(
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.all(
-                Radius.circular(7)
-            ),
-          ),
+          color: Colors.black,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -210,21 +198,19 @@ class CustomListItemTwo extends StatelessWidget {
 
 /// This is the stateless widget that the main application instantiates.
 class MyStatelessWidget extends StatelessWidget {
-  MyStatelessWidget({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Color.fromRGBO(0, 0, 0, 0.92),
+        color: Colors.black87,
         child: ListView(
           padding: const EdgeInsets.all(10.0),
           children: <Widget>[
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                      padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
                       child: Text(
-                        'Monthly Budget',
+                        'Monthly Budget:',
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
@@ -234,9 +220,9 @@ class MyStatelessWidget extends StatelessWidget {
                       ))),
               Expanded(
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 0.0),
                 child: Text(
-                  'Free Amount',
+                  'Free Amount:',
                   textAlign: TextAlign.right,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
@@ -249,25 +235,25 @@ class MyStatelessWidget extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                      padding: const EdgeInsets.fromLTRB(10.0, 10.0, 0.0, 0.0),
                       child: Text(
                         '\$ 5,000',
                         textAlign: TextAlign.left,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 25.0,
+                          fontSize: 15.0,
                           color: Colors.white,
                         ),
                       ))),
               Expanded(
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 10.0, 20.0, 0.0),
                 child: Text(
                   '\$ 210',
                   textAlign: TextAlign.right,
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 25.0,
+                    fontSize: 15.0,
                     color: Colors.orange,
                   ),
                 ),
@@ -276,37 +262,42 @@ class MyStatelessWidget extends StatelessWidget {
             Row(children: <Widget>[
               Expanded(
                   child: Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 20.0, 0.0, 10.0),
+                      padding: const EdgeInsets.fromLTRB(10.0, 20.0, 0.0, 0.0),
                       child: Text(
                         'Your Budgets',
                         textAlign: TextAlign.left,
                         style: const TextStyle(
-                          fontSize: 18.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),
+                            fontSize: 18.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
                       ))),
               Expanded(
-                flex: 0,
                   child: Padding(
-                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 0, 10.0),
+                padding: const EdgeInsets.fromLTRB(0.0, 20.0, 20.0, 0.0),
                 child: RaisedButton(
-                  textColor: Colors.white,
-                  padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                  color: Colors.black,
+                  padding: EdgeInsets.all(0.0),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0),
-                    side: BorderSide(color: Colors.green, width: 3),
+                    side: BorderSide(color: Colors.green, width: 2),
                   ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AddBudget()),
+                    );
+                  },
                   child: Text('New Budget',
                       style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 15,
                           color: Colors.white,
-                          fontWeight: FontWeight.w500)),
+                          fontWeight: FontWeight.normal)),
                 ),
               )),
             ]),
             CustomListItemTwo(
               thumbnail: Container(
+                color: Colors.black,
                 alignment: Alignment.center,
                 child: Icon(
                   Icons.videogame_asset_outlined,
@@ -411,18 +402,9 @@ class MyStatelessWidget extends StatelessWidget {
               freeamount: '\$ 0',
               percentused: 1.00,
             ),
-
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0, 10.0),
-              child: FloatingActionButton.extended(
-                  backgroundColor: Colors.green,
-                  label: Text(
-                      'New Expense',
-                      style: TextStyle(
-                          color:Colors.white
-                      )
-                  )
-              ),
+            FloatingActionButton.extended(
+              backgroundColor: Colors.green,
+              label: Text('New Expense', style: TextStyle(color: Colors.white)),
             )
           ],
         ));
